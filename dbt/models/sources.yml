@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw_flights
+    database: "{{ env_var('GCP_PROJECT_ID') }}"
+    schema: "{{ env_var('BQ_RAW_DATASET', 'raw_flights') }}"
+    tables:
+      - name: raw_states
